@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<h2>HTML Image</h2>
-<img src="uzi.jpeg" alt="Uzi" width="500" height="333">
-<script type="text/javascript">
-(function(window, document, dataLayerName, id) {
-window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
-function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString();f="; SameSite=Strict"}document.cookie=a+"="+b+d+f+"; path=/"}
-var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
-var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
-tags.async=!0,tags.src="https://uziorg.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
-!function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
-})(window, document, 'dataLayer', '19431814-7a2f-4085-ba0e-6bd11292b5a4');
-</script>
-</body>
+   <head>
+      <title>Page for Integration Tests</title>
+      <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" data-culture="DE" data-gcm-version="2.0" type="text/javascript"></script>
+   </head>
+   <body>
+      <h1>Hello World</h1>
+      <p>I'm hosted with Python.</p>
+
+      <!-- Add the button here -->
+      <button id="button-to-click">Click Me</button>
+
+      <script type="text/javascript">
+         (function(window, document, dataLayerName, id) {
+         window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+         var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);var qPString=qP.length>0?("?"+qP.join("&")):"";
+         tags.async=!0,tags.src="https://izu2.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+         !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+         })(window, document, 'dataLayer', '789d5a38-675c-4166-8b3b-1b488993d445');
+         </script>
+      <script>
+         window['stg'] = window['stg'] || {};
+         window['stg'].optedOutCheckboxText = "You’re opted out. Uncheck to opt in.";
+         window['stg'].optedInCheckboxText = "Opt out of data collection and usage";
+      </script>
+      <div id="_stg_opt_out_iframe_content" style="display: none;">
+         <p>Privacy on this site: We collect and process your data on this site to better understand how it is used. You can opt in or out at any time.</p>
+         <input id="_stg_optout_checkbox" onclick="window.parent.storeUserOptOutPreferences();" type="checkbox">
+         <label id="_stg_optout_checkbox_label" for="_stg_optout_checkbox"></label>
+      </div>
+      <div id='ppms_cm_privacy_settings' class='ppms_cm_privacy_settings_widget' data-editor-centralize='true' data-main-container='true' data-root='true'>
+         <div class='ppms_cm_privacy_settings_widget_content' data-disable-select='true'>
+            <h1 class='ppms_cm_privacy_settings_form_link_header' id='ppms_cm_privacy_settings_form_link_header_id'>Privacy settings</h1>
+            <p class='ppms_cm_privacy_settings_form_link_text' id='ppms_cm_privacy_settings_form_link_text_id'>We collect and process your data on this site to better understand how it is used. We always ask you for consent to do that. You can change your privacy settings here.</p>
+            <button class='ppms_cm_privacy_settings_button_show' id='ppms_cm_privacy_settings_button'>Manage settings</button>
+         </div>
+      </div>
+      <script>
+         var srcBase = getQueryParam('host') || null;
+         var script = document.createElement('script');
+         script.src = `https://${srcBase}/privacy/script.v2.js`;
+         document.body.appendChild(script);
+      </script>
+   </body>
 </html>
